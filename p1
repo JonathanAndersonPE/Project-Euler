@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Aug 14 22:20:40 2017
+
+Project Euler
+Problem 1
+
+@author: jon anderson
+"""
+
+#div3_list=[0 for i in range(1000)] 
+#div5_list=[0 for i in range(1000)]
+sum = 0
+for i in range(1000) :
+    if (i % 3) == 0 :
+        #div3_list[i]=i
+        sum = sum +i
+    elif (i%5)==0 :
+        #div5_list[i]=i
+        sum = sum +i
