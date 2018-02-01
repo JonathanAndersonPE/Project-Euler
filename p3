@@ -17,7 +17,7 @@ primes[1]=3
 test = False
 for i in range(2,m) :
     primes[i] = primes[i-1]+2 
-    for k in range(0,i):
+    for k in range(0,i-1):
         if primes[i] % primes[k] == 0 :
             test = True
             k=i
@@ -33,18 +33,20 @@ for i in range(2,m) :
 
 # build array of all prime factors of number n
 n=600851475143
-pfactors=[0 for i in range(int(n**.5+1))]
+pfactors=[]
 i=0
 j=0
 for i in range(len(primes)):
     if n % primes[i] == 0:
-        pfactors[j]=primes[i]
+        pfactors.append(primes[i])
         j=j+1
     i=i+1
    
 max(pfactors)
 
+
 # build array of all divisors of number m
+# takes forever. Start before bed. Maybe it will be done by morning.
 m=600851475143
 divisors=[0 for i in range(int(n**.5+1))]
 i=1
