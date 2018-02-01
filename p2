@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Aug 14 23:01:37 2017
+
+Project Euler
+Problem 2
+
+@author: jon anderson
+"""
+
+
+def fibonacci(i):
+    if i == 0 :
+        return 1;
+    elif i == 1 :
+        return 1;
+    elif i > 1 :
+        return fibonacci(i-1) + fibonacci(i-2);
+
+'''
+fib_list = [0 for i in range(10)]
+for m in range(10):
+    fib_list[m] = fibonacci(m)
+'''
+
+sum = 0
+m = 0
+temp =0
+while temp < 4000000 :
+    temp = fibonacci(m)
+    m = m+1
+    if temp % 2 == 0 :
+        sum = sum + temp
