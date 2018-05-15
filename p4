@@ -20,10 +20,26 @@ def ispalindrome(n):
 highestpal = 0
 highesti = 0
 highestj = 0
-for i in range(1000,1,-1):
-    for j in range(1000,1,-1):
+pal=[]
+palargi=[]
+palargj=[]
+for i in range(999,100,-1):
+    for j in range(i,100,-1):
          if ispalindrome(i*j):
+             pal.append(i*j)
+             palargi.append(i)
+             palargj.append(j)
              if i*j > highestpal:
                  highestpal = i*j
                  highestj = j
                  highesti = i
+
+import matplotlib.pyplot as plt
+plt.plot(pal)
+pal.sort()
+plt.plot(pal)
+plt.show()
+
+plt.plot(palargi)
+plt.plot(palargj)
+plt.show()
